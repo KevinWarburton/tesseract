@@ -4,7 +4,8 @@ project(tesseract_ros)
 add_compile_options(-std=c++11 -Wall -Wextra)
 
 find_package(catkin REQUIRED COMPONENTS
-  tesseract_core
+#  tesseract_core is no longer a package, but a folder containg packages
+#  tesseract_core
   tesseract_msgs
   tesseract_collision
   roscpp
@@ -26,11 +27,12 @@ catkin_package(
     include
     ${EIGEN3_INCLUDE_DIRS}
   LIBRARIES
-    ${PROJECT_NAME}_kdl
+    #The library below seemed to be a reminant before Levi's code refactor
+#    ${PROJECT_NAME}_kdl
     ${OCTOMAP_LIBRARIES}
     ${orocos_kdl_LIBRARIES}
   CATKIN_DEPENDS
-    tesseract_core
+#    tesseract_core
     tesseract_msgs
     tesseract_collision
     roscpp
@@ -64,12 +66,13 @@ add_library(tesseract_collision_fcl_plugin src/plugins/fcl_plugin.cpp)
 target_link_libraries(tesseract_collision_fcl_plugin ${catkin_LIBRARIES})
 target_compile_options(tesseract_collision_fcl_plugin PRIVATE -Wsuggest-override -Wconversion -Wsign-conversion)
 
+#The library below seemed to be a reminant before Levi's code refactor
 # Mark executables and/or libraries for installation
-install(TARGETS ${PROJECT_NAME}_kdl tesseract_collision_bullet_plugin tesseract_collision_fcl_plugin
-  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#install(TARGETS ${PROJECT_NAME}_kdl tesseract_collision_bullet_plugin tesseract_collision_fcl_plugin
+#  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+#  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 # Mark cpp header files for installation
 install(DIRECTORY include/${PROJECT_NAME}/
