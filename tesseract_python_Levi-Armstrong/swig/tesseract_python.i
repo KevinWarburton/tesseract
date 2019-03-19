@@ -101,5 +101,8 @@ tesseract_python_ros_init([],"tesseract_python_module")
 //%include "tesseract_planning/trajopt/trajopt_planner.i"
 
 //KEVIN ADDED DIRECTIVES BELOW:
+%include "tesseract_core/tesseract_geometry/types.i"
 %include "tesseract_core/tesseract_geometry/geometry.i"
 %include "tesseract_core/tesseract_geometry/impl/box.i"
+%include "tesseract_core/tesseract_geometry/impl/cone.i"
+//%include "tesseract_core/tesseract_geometry/impl/convex_mesh.i"

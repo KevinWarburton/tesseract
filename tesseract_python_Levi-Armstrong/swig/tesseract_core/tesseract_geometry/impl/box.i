@@ -1,13 +1,14 @@
 %{
-//#include <tesseract_core/tesseract_geometry/include/tesseract_geometry/impl/box.h>
-//#include "/home/ros-industrial/repos_KevinWarburton/tesseract_python_wrapping_Levi-Armstrong_version/src/tesseract/tesseract_core/tesseract_geometry/include/tesseract_geometry/impl/box.h"
-//#include <tesseract_geometry/include/tesseract_geometry/impl/box.h>
 #include <tesseract_geometry/impl/box.h>
-#include <tesseract_geometry/geometry.h>
-//#include "../../../../../tesseract_core/tesseract_geometry/include/tesseract_geometry/geometry.h"
 %}
 
 %shared_ptr(tesseract_geometry::Box) //overloaded with const Box
+
+//TEST FOR AUTO UPDATE FUNCTIONS
+////%include <tesseract_geometry/macros.h>
+////%include <memory>
+////%include <tesseract_geometry/geometry.h>
+//%include <tesseract_geometry/impl/box.h>
 
 namespace tesseract_geometry
 {
