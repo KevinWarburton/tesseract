@@ -105,4 +105,11 @@ tesseract_python_ros_init([],"tesseract_python_module")
 %include "tesseract_core/tesseract_geometry/geometry.i"
 %include "tesseract_core/tesseract_geometry/impl/box.i"
 %include "tesseract_core/tesseract_geometry/impl/cone.i"
-//%include "tesseract_core/tesseract_geometry/impl/convex_mesh.i"
+%include "tesseract_core/tesseract_geometry/impl/convex_mesh.i"
+%include "tesseract_core/tesseract_geometry/impl/cylinder.i"
+%include "tesseract_core/tesseract_geometry/impl/mesh.i"
+%include "tesseract_core/tesseract_geometry/impl/octree.i"
+%include "tesseract_core/tesseract_geometry/impl/plane.i"
+%include "tesseract_core/tesseract_geometry/impl/sdf_mesh.i"
+%include "tesseract_core/tesseract_geometry/impl/sphere.i"
+

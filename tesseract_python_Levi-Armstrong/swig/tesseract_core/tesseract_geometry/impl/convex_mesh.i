@@ -21,7 +21,7 @@ namespace tesseract_geometry
   class ConvexMesh : public Geometry
   {
   public:
-    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
+//    EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
     ConvexMesh(const std::shared_ptr<const VectorVector3d>& vertices, const std::shared_ptr<const Eigen::VectorXi>& faces) : Geometry(GeometryType::CONVEX_MESH), vertices_(vertices), faces_(faces)
     {
